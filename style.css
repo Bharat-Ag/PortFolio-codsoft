@@ -256,20 +256,36 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  place-items: center;
 }
 .scard {
-  min-width: 250px;
-  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%;
   padding: 20px;
-  background-color: #176b87;
   border-radius: 9px;
+  position: relative;
+  overflow: hidden;
+  background: rgb(18, 166, 167);
+  background: linear-gradient(
+    356deg,
+    rgb(23, 52, 71) 0%,
+    rgb(39, 76, 175) 100%
+  );
 }
 
 .scard h1 {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
   font-size: 2rem;
+}
+
+.scard i {
+  font-size: 5rem;
 }
 
 #contact {
@@ -408,6 +424,7 @@ footer {
   }
   .skills {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
   .contact {
     gap: 20px;
@@ -446,6 +463,9 @@ footer {
   .follow .social a {
     padding: 7px;
   }
+  .scard{
+    max-width: 90%;
+  }
 }
 @media screen and (max-width: 435px) {
   .profession {
@@ -465,7 +485,7 @@ footer {
     font-weight: 500;
   }
   .contact {
-    gap: 10px;
+    flex-direction: column;
   }
   form button {
     width: 100%;
@@ -475,6 +495,9 @@ footer {
   }
   .follow {
     width: auto;
+  }
+  .form {
+    width: 100%;
   }
   .email h1 {
     font-size: 0.9rem;
@@ -501,12 +524,6 @@ footer {
     font-size: 0.9rem;
   }
 
-  .contact {
-    flex-direction: column;
-  }
-  .form {
-    width: 100%;
-  }
   footer {
     font-size: 0.7rem;
   }
