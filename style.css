@@ -347,7 +347,6 @@ form {
   flex-direction: column;
   width: 100%;
   gap: 10px;
- 
 }
 form input,
 textarea {
@@ -358,7 +357,8 @@ textarea {
   border: none;
   border-radius: 5px;
   resize: none;
-   color:white;
+  color: white;
+
 }
 
 form button {
