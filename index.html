@@ -208,6 +208,7 @@
       </section>
 
       <!-- --------contact----------- -->
+
       <section id="contact">
         <h1>contact me</h1>
         <div class="contact">
@@ -237,11 +238,31 @@
           </div>
         </div>
       </section>
+
       <!-- --------footer----------- -->
+
       <footer>
         <p>&copy; 2023 bharat agrawal. All rights reserved.</p>
       </footer>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+      let menuIcon = document.getElementById("menu_icon");
+      let menu = document.querySelector(".menu");
+
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      let navLinks = document.querySelectorAll(".nav-links");
+      navLinks.forEach((nav) => {
+        nav.addEventListener("click", () => {
+          navLinks.forEach((item) => {
+            item.classList.remove("active");
+          });
+          nav.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
